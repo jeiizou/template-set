@@ -10,7 +10,9 @@ export default defineConfig({
             name: '__project_name__',
             // the proper extensions will be added
             fileName: '__project_name__',
+            formats: ['es', 'cjs', 'umd'],
         },
+        sourcemap: true,
         // // 这里是个例子
         // rollupOptions: {
         //     // 确保外部化处理那些你不想打包进库的依赖

@@ -1,8 +1,23 @@
 {
     "name": "__project_name__",
+    "author": "__author_name__",
     "private": true,
     "version": "0.0.0",
     "type": "module",
+    "main": "./dist/__project_name__.umd.cjs",
+    "module": "./dist/__project_name__.js",
+    "types": "./dist/index.d.ts",
+    "exports": {
+        ".": {
+            "import": "./dist/__project_name__.js",
+            "require": "./dist/__project_name__.umd.cjs"
+        }
+    },
+    "files": [
+        "dist",
+        "package.json",
+        "README.md"
+    ],
     "scripts": {
         "dev": "vite",
         "build": "vite build",
@@ -14,16 +29,5 @@
         "vite": "^4.0.0",
         "vite-plugin-dts": "^1.7.1"
     },
-    "files": [
-        "dist"
-    ],
-    "main": "./dist/__project_name__.umd.cjs",
-    "module": "./dist/__project_name__.js",
-    "types": "./dist/index.d.ts",
-    "exports": {
-        ".": {
-            "import": "./dist/__project_name__.js",
-            "require": "./dist/__project_name__.umd.cjs"
-        }
-    }
+    "license": "MIT"
 }
